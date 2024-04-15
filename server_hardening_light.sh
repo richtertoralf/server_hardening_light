@@ -34,7 +34,7 @@ disable_root_ssh() {
 }
 
 # Benutzer anlegen, zur sudo-Gruppe hinzufügen und Passwort festlegen
-add_user_and_sudo "tori" "password123"
+add_user_and_sudo "username" "geheimespassword123"
 
 # Fail2Ban installieren
 install_fail2ban
