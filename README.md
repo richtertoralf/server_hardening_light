@@ -1,5 +1,6 @@
 # server_hardening_light
 
 1. Benutzer mit eingeschränkten Rechten erstellen: Das Anlegen eines dedizierten Benutzers für die täglichen Aufgaben und das Hinzufügen zur sudo-Gruppe ermöglicht es, administrative Aufgaben durchzuführen, ohne ständig als Root angemeldet zu sein. Dies reduziert das Risiko, durch Sicherheitslücken oder Angriffe kompromittiert zu werden.
+Das sollte allerdings nicht so wie im Skript gezeigt, getan werden. Stattdessen sollte das Passwort aus einer sicheren Quelle, wie einer verschlüsselten Datei oder einem Passwort-Manager gelesen werden. Hier geht es nur ums Prinzip, wie mit einem sehr einfachen Skript, so etwas erledigt werden könnte.
 2. Fail2Ban installieren: Fail2Ban überwacht die Logdateien von Diensten wie SSH und blockiert automatisch IP-Adressen von Angreifern, die versuchen, sich wiederholt erfolglos anzumelden. Dies erschwert es Angreifern, sich über Brute-Force-Angriffe Zugang zu deinem Server zu verschaffen.
 3. Root-Zugriff per SSH deaktivieren: Indem du den direkten Root-Zugriff über SSH deaktivierst, erschwerst du es potenziellen Angreifern, sich direkt als Root anzumelden. Stattdessen müssen sie sich zuerst als normaler Benutzer anmelden und dann sudo verwenden, um administrative Aufgaben auszuführen. Dies minimiert das Risiko von Angriffen, die auf die Root-Berechtigungen abzielen.
