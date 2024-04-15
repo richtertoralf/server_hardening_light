@@ -9,7 +9,7 @@ add_user_and_sudo() {
     sudo adduser --gecos "" "$username"
 
     # Passwort für den Benutzer festlegen
-    echo "$username:$password" | sudo chpasswd
+    echo -e "$password\n$password" | sudo passwd "$username"
 
     # Zum sudo hinzufügen
     sudo usermod -aG sudo "$username"
